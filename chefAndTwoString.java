@@ -8,12 +8,22 @@ public class chefAndTwoString {
         int T = sc.nextInt();
         for (int i = 0; i < T ; i++) {
             String S1 = sc.next();
+            char [] ch1 = S1.toCharArray();
             String S2 = sc.next();
+            char [] ch2 = S2.toCharArray();
+            int max = 0 ;
             int min = 0 ;
             for (int j = 0; j < S1.length(); j++) {
-                if (S1.charAt(i)!=S2.charAt(i) || S1.charAt(i)=='?' || S2.charAt(i)=='?' )
-                    min++;
+                if (ch2[j]== '?'   ) ch2[j]=1;
             }
+            for (int j = 0; j < S1.length(); j++) {
+                if ((ch1[j] != '?' &&  ch2[j] != 1 )&& ch1[j] != ch2[j]  ) min++;
+            }
+            System.out.print(min + " ");
+            for (int j = 0; j < S1.length(); j++) {
+                if (ch1[j] != ch2[j]  ) max++;
+            }
+            System.out.println(max);
         }
     }
 }
