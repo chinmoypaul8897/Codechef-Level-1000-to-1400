@@ -19,12 +19,17 @@ public class discrepanciesInTheVotersList {
                 arr[j] = sc.nextInt();
             }
             Arrays.sort(arr);
+
             ArrayList<Integer> finalList = new ArrayList<>();
-            for (int i = 0; i < N1+N2+N3-1; i++) {
-                if (arr[i] != arr[i+1])
+            for (int i = 0; i < N1+N2+N3; i++) {
+                int count = 1 ;
+                while( i+1 < arr.length && arr[i]==arr[i+1])
                 {
-                    finalList.add(arr[i]);
+                    count++;
+                    i++;
+
                 }
+                if (count >= 2 ) finalList.add(arr[i]);
              }
         System.out.println(finalList.size());
         for (int ele : finalList)
