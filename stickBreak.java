@@ -7,7 +7,8 @@ public class stickBreak {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         for (int i = 0; i < T ; i++) {
-            
+            int N = sc.nextInt();
+            int M = sc.nextInt();
         }
     }
 }
