@@ -7,8 +7,10 @@ public class stickBreak {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         for (int i = 0; i < T ; i++) {
-            int N = sc.nextInt();
-            int M = sc.nextInt();
+            int L = sc.nextInt();   // the initial length of the stick
+            int K = sc.nextInt();   // the number of parts Chef wants to break the stick into.
+            if (L % K == 0 ) System.out.println(0);
+                else System.out.println(L-K);
         }
     }
 }
