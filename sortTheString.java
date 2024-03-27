@@ -9,6 +9,15 @@ public class sortTheString {
         for (int i = 0; i < T ; i++) {
             int N = sc.nextInt();   // the length of the binary string
             String S = sc.next();
+            int count = 0 ;
+            for (int j = 0; j < N-1; j++) {
+                if (S.charAt(j)=='1' && S.charAt(j+1)=='0')
+                    count++;
+            }
+            System.out.println(count);
+
+
+
         }
     }
 }

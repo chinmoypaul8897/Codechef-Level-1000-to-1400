@@ -10,7 +10,7 @@ public class stickBreak {
             int L = sc.nextInt();   // the initial length of the stick
             int K = sc.nextInt();   // the number of parts Chef wants to break the stick into.
             if (L % K == 0 ) System.out.println(0);
-                else System.out.println(L-K);
+                else System.out.println(1);
         }
     }
 }
